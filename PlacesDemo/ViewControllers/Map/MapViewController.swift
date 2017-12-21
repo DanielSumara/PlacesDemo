@@ -38,13 +38,15 @@ public final class MapViewController: UIViewController {
     public override func viewDidLoad() {
         super.viewDidLoad()
         
+        mapView.delegate = self
+        
         title = "Mapa"
+        
+        viewModel.updateView()
     }
     
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        viewModel.updateView()
         
         mapView.showsUserLocation = true
     }
@@ -64,7 +66,20 @@ extension MapViewController: MapView {
     }
     
     public func set(_ places: [Place]) {
+        mapView.removeAnnotations(mapView.annotations)
+        mapView.addAnnotations(places.map { Annotation(from: $0) })
+        mapView.showAnnotations(mapView.annotations, animated: true)
+    }
+    
+}
+
+extension MapViewController: MKMapViewDelegate {
+    
+    public func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        guard let annotation = view.annotation as? Annotation else { return }
         
+        viewModel.showDetails(for: annotation.place)
+        mapView.deselectAnnotation(annotation, animated: true)
     }
     
 }

@@ -28,6 +28,11 @@ public struct Coordinates {
         longitude = coordinates.longitude
     }
     
+    public init(from place: Place) {
+        latitude = place.latitude
+        longitude = place.longitude
+    }
+    
 }
 
 extension Coordinates: Hashable {

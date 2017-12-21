@@ -1,5 +1,5 @@
 //
-//  MapViewModel.swift
+//  PlaceViewModel.swift
 //  PlacesDemo
 //
 //  Created by Daniel Sumara on 21.12.2017.
@@ -8,11 +8,10 @@
 
 import Foundation
 
-public protocol MapViewModel {
+public protocol PlaceDetailsViewModel {
     
-    weak var view: MapView! { get set }
+    weak var view: PlaceDetailsView! { get set }
     
     func updateView()
-    func showDetails(for place: Place)
     
 }

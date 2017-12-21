@@ -11,8 +11,12 @@ import Foundation
 
 extension CLLocationCoordinate2D {
     
-    init(from coordinates: Coordinates) {
+    public init(from coordinates: Coordinates) {
         self.init(latitude: coordinates.latitude, longitude: coordinates.longitude)
+    }
+    
+    public init(from place: Place) {
+        self.init(latitude: place.latitude, longitude: place.longitude)
     }
     
 }

@@ -16,6 +16,8 @@ extension MapViewController {
         
         public weak var view: MapView!
         
+        private weak var coordinator: DetailsCoordinator!
+        
         private let locationService: LocationService
         private let placeRepository: PlacesRepository!
         
@@ -24,9 +26,11 @@ extension MapViewController {
         
         // MARK:- Lifecycle
         
-        public init(using locationService: LocationService, and placeRepository: PlacesRepository!) {
-            self.locationService = locationService
-            self.placeRepository = placeRepository
+        public init(coordinator: DetailsCoordinator, service: LocationService, repository: PlacesRepository!) {
+            self.coordinator = coordinator
+            
+            locationService = service
+            placeRepository = repository
         }
         
         // MARK:- MapViewModel
@@ -47,6 +51,10 @@ extension MapViewController {
                 
                 self.getPlaces(around: deviceLocalization)
             }
+        }
+        
+        public func showDetails(for place: Place) {
+            coordinator.showDetails(of: place)
         }
         
         // MARK:- Methods

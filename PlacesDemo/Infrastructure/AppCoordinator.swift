@@ -16,13 +16,14 @@ final class AppCoordinator {
     let application: UIApplication
     let window: UIWindow
     
-    private lazy var rootViewController: UIViewController = self.createRootViewController()
+    private lazy var rootViewController: UITabBarController = self.createRootViewController()
     
     private lazy var mapViewController: UIViewController = self.createMapViewController()
     private lazy var lastPlacesViewControlle: UIViewController = self.createPlacesViewController()
     
     private lazy var locationService: LocationService = LocationServiceFactory().create()
     private lazy var placesRepository: PlacesRepository = PlacesRepositoryFactory().create()
+    private lazy var imageRepository: ImageRepository = ImageRepositoryFactory().create()
     
     // MARK:- Lifecycle
     
@@ -39,7 +40,7 @@ final class AppCoordinator {
     
     // MARK:- Methods
     
-    private func createRootViewController() -> UIViewController {
+    private func createRootViewController() -> UITabBarController {
         let root = UITabBarController(nibName: nil, bundle: nil)
         root.viewControllers = [
             mapViewController,
@@ -49,8 +50,8 @@ final class AppCoordinator {
     }
     
     private func createMapViewController() -> UIViewController {
-        let vc = MapViewController(with: MapViewController.ViewModel(using: locationService, and: placesRepository))
-        vc.view.backgroundColor = .red
+        let viewModel = MapViewController.ViewModel(coordinator: self, service: locationService, repository: placesRepository)
+        let vc = MapViewController(with: viewModel)
         
         let nav = UINavigationController(rootViewController: vc)
         nav.tabBarItem = UITabBarItem(for: .map)
@@ -66,6 +67,16 @@ final class AppCoordinator {
         nav.tabBarItem = UITabBarItem(for: .lastPlaces)
         
         return nav
+    }
+    
+}
+
+extension AppCoordinator: DetailsCoordinator {
+    
+    func showDetails(of place: Place) {
+        let viewModel = PlaceDetailsViewController.ViewModel(for: place, using: imageRepository)
+        let vc = PlaceDetailsViewController(with: viewModel)
+        rootViewController.selectedViewController?.show(vc, sender: self)
     }
     
 }

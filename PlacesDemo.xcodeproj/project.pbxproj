@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		096677A41FEC65A800A64D2F /* ImageRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096677A31FEC65A800A64D2F /* ImageRepository.swift */; };
+		096677A61FEC65E600A64D2F /* ImageRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096677A51FEC65E600A64D2F /* ImageRepositoryFactory.swift */; };
 		0971760A1FEC060200C5975D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 097176091FEC060200C5975D /* AppDelegate.swift */; };
 		0971760F1FEC060200C5975D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0971760D1FEC060200C5975D /* Main.storyboard */; };
 		097176121FEC060200C5975D /* PlacesDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 097176101FEC060200C5975D /* PlacesDemo.xcdatamodeld */; };
@@ -31,6 +33,14 @@
 		09F8DABE1FEC35AF00460888 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F8DABD1FEC35AF00460888 /* MapViewModel.swift */; };
 		09F8DAC21FEC393700460888 /* CLLocationCoordinate2D+Cooarinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F8DAC11FEC393700460888 /* CLLocationCoordinate2D+Cooarinates.swift */; };
 		09F8DAC51FEC3B8100460888 /* PlacesRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F8DAC41FEC3B8100460888 /* PlacesRepositoryFactory.swift */; };
+		09F8DAC71FEC4F8300460888 /* MapViewController+Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F8DAC61FEC4F8300460888 /* MapViewController+Annotation.swift */; };
+		09F8DAC91FEC549F00460888 /* DetailsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F8DAC81FEC549F00460888 /* DetailsCoordinator.swift */; };
+		09F8DACC1FEC584400460888 /* PlaceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F8DACB1FEC584400460888 /* PlaceDetailsViewController.swift */; };
+		09F8DACE1FEC58A900460888 /* PlaceDetailsViewController+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F8DACD1FEC58A900460888 /* PlaceDetailsViewController+ViewModel.swift */; };
+		09F8DAD01FEC58CF00460888 /* PlaceDetailsViewController+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F8DACF1FEC58CF00460888 /* PlaceDetailsViewController+View.swift */; };
+		09F8DAD21FEC58DC00460888 /* PlaceDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F8DAD11FEC58DC00460888 /* PlaceDetailsView.swift */; };
+		09F8DAD41FEC58E800460888 /* PlaceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F8DAD31FEC58E800460888 /* PlaceViewModel.swift */; };
+		09F8DAD71FEC5FB800460888 /* UIView+AutoLayouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F8DAD61FEC5FB800460888 /* UIView+AutoLayouts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		096677A31FEC65A800A64D2F /* ImageRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepository.swift; sourceTree = "<group>"; };
+		096677A51FEC65E600A64D2F /* ImageRepositoryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageRepositoryFactory.swift; sourceTree = "<group>"; };
 		097176061FEC060200C5975D /* PlacesDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlacesDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		097176091FEC060200C5975D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0971760E1FEC060200C5975D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +84,14 @@
 		09F8DABD1FEC35AF00460888 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		09F8DAC11FEC393700460888 /* CLLocationCoordinate2D+Cooarinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CLLocationCoordinate2D+Cooarinates.swift"; sourceTree = "<group>"; };
 		09F8DAC41FEC3B8100460888 /* PlacesRepositoryFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesRepositoryFactory.swift; sourceTree = "<group>"; };
+		09F8DAC61FEC4F8300460888 /* MapViewController+Annotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+Annotation.swift"; sourceTree = "<group>"; };
+		09F8DAC81FEC549F00460888 /* DetailsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsCoordinator.swift; sourceTree = "<group>"; };
+		09F8DACB1FEC584400460888 /* PlaceDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsViewController.swift; sourceTree = "<group>"; };
+		09F8DACD1FEC58A900460888 /* PlaceDetailsViewController+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlaceDetailsViewController+ViewModel.swift"; sourceTree = "<group>"; };
+		09F8DACF1FEC58CF00460888 /* PlaceDetailsViewController+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlaceDetailsViewController+View.swift"; sourceTree = "<group>"; };
+		09F8DAD11FEC58DC00460888 /* PlaceDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailsView.swift; sourceTree = "<group>"; };
+		09F8DAD31FEC58E800460888 /* PlaceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceViewModel.swift; sourceTree = "<group>"; };
+		09F8DAD61FEC5FB800460888 /* UIView+AutoLayouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayouts.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +113,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		096677A21FEC659700A64D2F /* ImageRepository */ = {
+			isa = PBXGroup;
+			children = (
+				096677A31FEC65A800A64D2F /* ImageRepository.swift */,
+				096677A51FEC65E600A64D2F /* ImageRepositoryFactory.swift */,
+			);
+			path = ImageRepository;
+			sourceTree = "<group>";
+		};
 		097175FD1FEC060200C5975D = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +150,7 @@
 				097176361FEC0B4B00C5975D /* Models */,
 				097176301FEC063700C5975D /* Resources */,
 				0971762F1FEC062500C5975D /* SupportingFiles */,
+				09F8DAD51FEC5F8B00460888 /* Utilities */,
 				0971763F1FEC0F7500C5975D /* ViewControllers */,
 			);
 			path = PlacesDemo;
@@ -195,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				0971763D1FEC0C2C00C5975D /* UITabBarItem+MenuItem.swift */,
+				09F8DAD61FEC5FB800460888 /* UIView+AutoLayouts.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -214,6 +245,7 @@
 			children = (
 				09F8DABB1FEC34E800460888 /* MapView.swift */,
 				097176431FEC0FAC00C5975D /* MapViewController.swift */,
+				09F8DAC61FEC4F8300460888 /* MapViewController+Annotation.swift */,
 				09F8DAB61FEC21E800460888 /* MapViewController+ViewModel.swift */,
 				09F8DABD1FEC35AF00460888 /* MapViewModel.swift */,
 			);
@@ -230,6 +262,11 @@
 		097176421FEC0F9400C5975D /* PlaceDetails */ = {
 			isa = PBXGroup;
 			children = (
+				09F8DAD11FEC58DC00460888 /* PlaceDetailsView.swift */,
+				09F8DACB1FEC584400460888 /* PlaceDetailsViewController.swift */,
+				09F8DACF1FEC58CF00460888 /* PlaceDetailsViewController+View.swift */,
+				09F8DACD1FEC58A900460888 /* PlaceDetailsViewController+ViewModel.swift */,
+				09F8DAD31FEC58E800460888 /* PlaceViewModel.swift */,
 			);
 			path = PlaceDetails;
 			sourceTree = "<group>";
@@ -245,6 +282,7 @@
 		09A0154E1FEC12FA008C331E /* Contracts */ = {
 			isa = PBXGroup;
 			children = (
+				096677A21FEC659700A64D2F /* ImageRepository */,
 				09F8DAB81FEC31C900460888 /* Infrastructure */,
 				09F8DAB31FEC187700460888 /* LocationService */,
 				09F8DAC31FEC3B6900460888 /* PlacesRepository */,
@@ -274,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				09F8DAB91FEC31D800460888 /* View.swift */,
+				09F8DACA1FEC54D900460888 /* Coordinators */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -301,6 +340,21 @@
 				09F8DAC41FEC3B8100460888 /* PlacesRepositoryFactory.swift */,
 			);
 			path = PlacesRepository;
+			sourceTree = "<group>";
+		};
+		09F8DACA1FEC54D900460888 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				09F8DAC81FEC549F00460888 /* DetailsCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		09F8DAD51FEC5F8B00460888 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,10 +465,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				09F8DAD01FEC58CF00460888 /* PlaceDetailsViewController+View.swift in Sources */,
+				09F8DAD21FEC58DC00460888 /* PlaceDetailsView.swift in Sources */,
 				0971763A1FEC0B9F00C5975D /* MenuItem.swift in Sources */,
 				09F8DABC1FEC34E800460888 /* MapView.swift in Sources */,
+				09F8DACE1FEC58A900460888 /* PlaceDetailsViewController+ViewModel.swift in Sources */,
 				097176381FEC0B5A00C5975D /* Icon.swift in Sources */,
 				09F8DABA1FEC31D800460888 /* View.swift in Sources */,
+				09F8DAC91FEC549F00460888 /* DetailsCoordinator.swift in Sources */,
 				097176331FEC069700C5975D /* AppCoordinator.swift in Sources */,
 				09A015501FEC1316008C331E /* PlacesRepository.swift in Sources */,
 				09F8DAB71FEC21E800460888 /* MapViewController+ViewModel.swift in Sources */,
@@ -423,13 +481,19 @@
 				0971763E1FEC0C2C00C5975D /* UITabBarItem+MenuItem.swift in Sources */,
 				09F8DAC21FEC393700460888 /* CLLocationCoordinate2D+Cooarinates.swift in Sources */,
 				09A015531FEC1380008C331E /* Coordinates.swift in Sources */,
+				09F8DAC71FEC4F8300460888 /* MapViewController+Annotation.swift in Sources */,
+				09F8DACC1FEC584400460888 /* PlaceDetailsViewController.swift in Sources */,
 				09A0154D1FEC1191008C331E /* Place.swift in Sources */,
 				0971760A1FEC060200C5975D /* AppDelegate.swift in Sources */,
 				09F8DABE1FEC35AF00460888 /* MapViewModel.swift in Sources */,
+				09F8DAD71FEC5FB800460888 /* UIView+AutoLayouts.swift in Sources */,
 				09F8DAB21FEC17AD00460888 /* LocationService.swift in Sources */,
+				09F8DAD41FEC58E800460888 /* PlaceViewModel.swift in Sources */,
 				097176441FEC0FAC00C5975D /* MapViewController.swift in Sources */,
 				09F8DAC51FEC3B8100460888 /* PlacesRepositoryFactory.swift in Sources */,
+				096677A61FEC65E600A64D2F /* ImageRepositoryFactory.swift in Sources */,
 				09F8DAB51FEC18C100460888 /* LocationServiceFactory.swift in Sources */,
+				096677A41FEC65A800A64D2F /* ImageRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -79,7 +79,9 @@ final class RESTPlacesRepository: PlacesRepository {
             guard let requests = self.requests[location] else { return }
             self.requests[location] = nil
             
-            requests.forEach { $0(places) }
+            DispatchQueue.main.async {
+                requests.forEach { $0(places) }
+            }
         }
     }
     

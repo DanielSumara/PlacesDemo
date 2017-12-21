@@ -60,7 +60,9 @@ final class CLLocationService: NSObject, CLLocationManagerDelegate, LocationServ
             let requests = self.requests
             self.requests = []
             
-            requests.forEach { $0(Coordinates(from: location)) }
+            DispatchQueue.main.async {
+                requests.forEach { $0(Coordinates(from: location)) }
+            }
         }
     }
     
