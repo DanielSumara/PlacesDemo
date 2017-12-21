@@ -17,12 +17,14 @@ public final class LocationServiceFactory {
     
 }
 
-private final class CLLocationService: NSObject, CLLocationManagerDelegate, LocationService {
+final class CLLocationService: NSObject, CLLocationManagerDelegate, LocationService {
     
     //MARK:- Properties
     
     private let manager = CLLocationManager()
     private var requests: [(Coordinates) -> Void] = []
+    
+    private let queue: DispatchQueue = DispatchQueue(label: "CLLocationService", qos: .userInteractive, attributes: .concurrent)
     
     // MARK:- Lifecycle
     
@@ -34,7 +36,10 @@ private final class CLLocationService: NSObject, CLLocationManagerDelegate, Loca
     // MARK:- LocationService
     
     func currentLocation(completion: @escaping (Coordinates) -> Void) {
-        requests.append(completion)
+        queue.async(flags: .barrier) { [weak self] in
+            guard let `self` = self else { return }
+            self.requests.append(completion)
+        }
         
         runService()
     }
@@ -49,12 +54,13 @@ private final class CLLocationService: NSObject, CLLocationManagerDelegate, Loca
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location: CLLocationCoordinate2D = manager.location?.coordinate else { return }
         
-        DispatchQueue.global(qos: .userInitiated).async(flags: .barrier) { [weak self] in
+        queue.async(flags: .barrier) { [weak self] in
             guard let `self` = self else { return }
             
             let requests = self.requests
-            requests.forEach { $0(Coordinates(from: location)) }
             self.requests = []
+            
+            requests.forEach { $0(Coordinates(from: location)) }
         }
     }
     

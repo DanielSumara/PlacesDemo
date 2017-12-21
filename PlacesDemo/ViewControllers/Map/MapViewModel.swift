@@ -1,5 +1,5 @@
 //
-//  PlacesRepository.swift
+//  MapViewModel.swift
 //  PlacesDemo
 //
 //  Created by Daniel Sumara on 21.12.2017.
@@ -8,8 +8,10 @@
 
 import Foundation
 
-public protocol PlacesRepository {
+public protocol MapViewModel {
     
-    func places(around location: Coordinates, completion: @escaping () -> [Place])
+    weak var view: MapView! { get set }
+    
+    func updateView()
     
 }

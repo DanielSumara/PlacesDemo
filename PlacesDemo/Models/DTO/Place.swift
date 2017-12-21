@@ -8,24 +8,26 @@
 
 import Foundation
 
-public struct Place {
+public struct Place: Codable {
     
     // MARK:- Properties
     
-    public let id: Int
+    public let id: String
     public let avatar: String
     public let latitude: Double
     public let longitude: Double
     public let name: String
     
-    // MARK:- Lifecycle
+}
+
+extension Place {
     
-    public init(id: Int, avatar: String, latitude: Double, longitude: Double, name: String) {
-        self.id = id
-        self.avatar = avatar
-        self.latitude = latitude
-        self.longitude = longitude
-        self.name = name
+    public enum CodingKeys: String, CodingKey {
+        case id
+        case avatar
+        case latitude = "lat"
+        case longitude = "lng"
+        case name
     }
     
 }

@@ -22,6 +22,7 @@ final class AppCoordinator {
     private lazy var lastPlacesViewControlle: UIViewController = self.createPlacesViewController()
     
     private lazy var locationService: LocationService = LocationServiceFactory().create()
+    private lazy var placesRepository: PlacesRepository = PlacesRepositoryFactory().create()
     
     // MARK:- Lifecycle
     
@@ -34,10 +35,6 @@ final class AppCoordinator {
     
     func initialize() {
         window.rootViewController = rootViewController
-        
-        locationService.currentLocation {
-            print("\t\t\($0))")
-        }
     }
     
     // MARK:- Methods
@@ -52,7 +49,7 @@ final class AppCoordinator {
     }
     
     private func createMapViewController() -> UIViewController {
-        let vc = MapViewController()
+        let vc = MapViewController(with: MapViewController.ViewModel(using: locationService, and: placesRepository))
         vc.view.backgroundColor = .red
         
         let nav = UINavigationController(rootViewController: vc)

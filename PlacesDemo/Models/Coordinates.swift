@@ -29,3 +29,17 @@ public struct Coordinates {
     }
     
 }
+
+extension Coordinates: Hashable {
+    
+    public var hashValue: Int { return "\(latitude)|\(longitude)".hashValue }
+    
+}
+
+extension Coordinates: Equatable {
+    
+    public static func ==(lhs: Coordinates, rhs: Coordinates) -> Bool {
+        return lhs.latitude == rhs.latitude && lhs.longitude == rhs.longitude
+    }
+    
+}
