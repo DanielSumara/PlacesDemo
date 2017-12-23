@@ -48,3 +48,9 @@ extension Coordinates: Equatable {
     }
     
 }
+
+extension Coordinates: CustomStringConvertible {
+    
+    public var description: String { return "\(longitude) E, \(latitude) N" }
+    
+}

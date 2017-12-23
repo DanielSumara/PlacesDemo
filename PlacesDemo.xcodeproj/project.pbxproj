@@ -30,6 +30,10 @@
 		09CA66021FEE7FB800C7646E /* PersistContainerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA66011FEE7FB700C7646E /* PersistContainerFactory.swift */; };
 		09CA66051FEE837A00C7646E /* PlaceMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA66041FEE837A00C7646E /* PlaceMO.swift */; };
 		09CA660A1FEE892C00C7646E /* Place+PlaceMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA66091FEE892C00C7646E /* Place+PlaceMO.swift */; };
+		09CA660C1FEE9FEB00C7646E /* PlaceListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA660B1FEE9FEB00C7646E /* PlaceListViewController.swift */; };
+		09CA660E1FEE9FF800C7646E /* PlaceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA660D1FEE9FF800C7646E /* PlaceListView.swift */; };
+		09CA66101FEEA00600C7646E /* PlaceListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA660F1FEEA00600C7646E /* PlaceListViewModel.swift */; };
+		09CA66141FEEA2BE00C7646E /* PlaceListViewController+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA66131FEEA2BE00C7646E /* PlaceListViewController+ViewModel.swift */; };
 		09F8DAB21FEC17AD00460888 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F8DAB11FEC17AD00460888 /* LocationService.swift */; };
 		09F8DAB51FEC18C100460888 /* LocationServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F8DAB41FEC18C100460888 /* LocationServiceFactory.swift */; };
 		09F8DAB71FEC21E800460888 /* MapViewController+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F8DAB61FEC21E800460888 /* MapViewController+ViewModel.swift */; };
@@ -86,6 +90,10 @@
 		09CA66011FEE7FB700C7646E /* PersistContainerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistContainerFactory.swift; sourceTree = "<group>"; };
 		09CA66041FEE837A00C7646E /* PlaceMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMO.swift; sourceTree = "<group>"; };
 		09CA66091FEE892C00C7646E /* Place+PlaceMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Place+PlaceMO.swift"; sourceTree = "<group>"; };
+		09CA660B1FEE9FEB00C7646E /* PlaceListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListViewController.swift; sourceTree = "<group>"; };
+		09CA660D1FEE9FF800C7646E /* PlaceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListView.swift; sourceTree = "<group>"; };
+		09CA660F1FEEA00600C7646E /* PlaceListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceListViewModel.swift; sourceTree = "<group>"; };
+		09CA66131FEEA2BE00C7646E /* PlaceListViewController+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PlaceListViewController+ViewModel.swift"; sourceTree = "<group>"; };
 		09F8DAB11FEC17AD00460888 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		09F8DAB41FEC18C100460888 /* LocationServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceFactory.swift; sourceTree = "<group>"; };
 		09F8DAB61FEC21E800460888 /* MapViewController+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+ViewModel.swift"; sourceTree = "<group>"; };
@@ -265,6 +273,10 @@
 		097176411FEC0F8E00C5975D /* LastPlaces */ = {
 			isa = PBXGroup;
 			children = (
+				09CA660D1FEE9FF800C7646E /* PlaceListView.swift */,
+				09CA660B1FEE9FEB00C7646E /* PlaceListViewController.swift */,
+				09CA66131FEEA2BE00C7646E /* PlaceListViewController+ViewModel.swift */,
+				09CA660F1FEEA00600C7646E /* PlaceListViewModel.swift */,
 			);
 			path = LastPlaces;
 			sourceTree = "<group>";
@@ -512,6 +524,7 @@
 				09F8DACE1FEC58A900460888 /* PlaceDetailsViewController+ViewModel.swift in Sources */,
 				097176381FEC0B5A00C5975D /* Icon.swift in Sources */,
 				09F8DABA1FEC31D800460888 /* View.swift in Sources */,
+				09CA66141FEEA2BE00C7646E /* PlaceListViewController+ViewModel.swift in Sources */,
 				09F8DAC91FEC549F00460888 /* DetailsCoordinator.swift in Sources */,
 				09CA660A1FEE892C00C7646E /* Place+PlaceMO.swift in Sources */,
 				097176331FEC069700C5975D /* AppCoordinator.swift in Sources */,
@@ -520,9 +533,11 @@
 				097176351FEC0A9A00C5975D /* Images.swift in Sources */,
 				097176121FEC060200C5975D /* PlacesDemo.xcdatamodeld in Sources */,
 				0971763E1FEC0C2C00C5975D /* UITabBarItem+MenuItem.swift in Sources */,
+				09CA660C1FEE9FEB00C7646E /* PlaceListViewController.swift in Sources */,
 				09F8DAC21FEC393700460888 /* CLLocationCoordinate2D+Cooarinates.swift in Sources */,
 				09A015531FEC1380008C331E /* Coordinates.swift in Sources */,
 				09F8DAC71FEC4F8300460888 /* MapViewController+Annotation.swift in Sources */,
+				09CA66101FEEA00600C7646E /* PlaceListViewModel.swift in Sources */,
 				09F8DACC1FEC584400460888 /* PlaceDetailsViewController.swift in Sources */,
 				09CA66001FEE7F4E00C7646E /* PersistContainerObserver.swift in Sources */,
 				09CA65FE1FEE7EBF00C7646E /* PersistContainer.swift in Sources */,
@@ -533,6 +548,7 @@
 				09F8DAB21FEC17AD00460888 /* LocationService.swift in Sources */,
 				09F8DAD41FEC58E800460888 /* PlaceViewModel.swift in Sources */,
 				097176441FEC0FAC00C5975D /* MapViewController.swift in Sources */,
+				09CA660E1FEE9FF800C7646E /* PlaceListView.swift in Sources */,
 				09F8DAC51FEC3B8100460888 /* PlacesRepositoryFactory.swift in Sources */,
 				096677A61FEC65E600A64D2F /* ImageRepositoryFactory.swift in Sources */,
 				09CA66021FEE7FB800C7646E /* PersistContainerFactory.swift in Sources */,

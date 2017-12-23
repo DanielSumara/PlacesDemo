@@ -65,8 +65,8 @@ final class AppCoordinator {
     }
     
     private func createPlacesViewController() -> UIViewController {
-        let vc = UIViewController()
-        vc.view.backgroundColor = .green
+        let viewModel = PlaceListViewController.ViewModel(persistContainer: persistContainer, detailsCoordinator: self)
+        let vc = PlaceListViewController(with: viewModel)
         
         let nav = UINavigationController(rootViewController: vc)
         nav.tabBarItem = UITabBarItem(for: .lastPlaces)
