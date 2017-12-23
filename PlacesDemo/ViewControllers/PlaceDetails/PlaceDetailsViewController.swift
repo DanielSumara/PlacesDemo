@@ -42,6 +42,12 @@ public final class PlaceDetailsViewController: UIViewController {
         viewModel.updateView()
     }
     
+    public override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        viewModel.persistPlace()
+    }
+    
 }
 
 extension PlaceDetailsViewController: PlaceDetailsView {

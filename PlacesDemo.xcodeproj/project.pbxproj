@@ -25,6 +25,11 @@
 		09A0154D1FEC1191008C331E /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A0154C1FEC1191008C331E /* Place.swift */; };
 		09A015501FEC1316008C331E /* PlacesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A0154F1FEC1316008C331E /* PlacesRepository.swift */; };
 		09A015531FEC1380008C331E /* Coordinates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A015521FEC1380008C331E /* Coordinates.swift */; };
+		09CA65FE1FEE7EBF00C7646E /* PersistContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA65FD1FEE7EBF00C7646E /* PersistContainer.swift */; };
+		09CA66001FEE7F4E00C7646E /* PersistContainerObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA65FF1FEE7F4E00C7646E /* PersistContainerObserver.swift */; };
+		09CA66021FEE7FB800C7646E /* PersistContainerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA66011FEE7FB700C7646E /* PersistContainerFactory.swift */; };
+		09CA66051FEE837A00C7646E /* PlaceMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA66041FEE837A00C7646E /* PlaceMO.swift */; };
+		09CA660A1FEE892C00C7646E /* Place+PlaceMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CA66091FEE892C00C7646E /* Place+PlaceMO.swift */; };
 		09F8DAB21FEC17AD00460888 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F8DAB11FEC17AD00460888 /* LocationService.swift */; };
 		09F8DAB51FEC18C100460888 /* LocationServiceFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F8DAB41FEC18C100460888 /* LocationServiceFactory.swift */; };
 		09F8DAB71FEC21E800460888 /* MapViewController+ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09F8DAB61FEC21E800460888 /* MapViewController+ViewModel.swift */; };
@@ -76,6 +81,11 @@
 		09A0154C1FEC1191008C331E /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		09A0154F1FEC1316008C331E /* PlacesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesRepository.swift; sourceTree = "<group>"; };
 		09A015521FEC1380008C331E /* Coordinates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinates.swift; sourceTree = "<group>"; };
+		09CA65FD1FEE7EBF00C7646E /* PersistContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistContainer.swift; sourceTree = "<group>"; };
+		09CA65FF1FEE7F4E00C7646E /* PersistContainerObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistContainerObserver.swift; sourceTree = "<group>"; };
+		09CA66011FEE7FB700C7646E /* PersistContainerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistContainerFactory.swift; sourceTree = "<group>"; };
+		09CA66041FEE837A00C7646E /* PlaceMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMO.swift; sourceTree = "<group>"; };
+		09CA66091FEE892C00C7646E /* Place+PlaceMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Place+PlaceMO.swift"; sourceTree = "<group>"; };
 		09F8DAB11FEC17AD00460888 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		09F8DAB41FEC18C100460888 /* LocationServiceFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationServiceFactory.swift; sourceTree = "<group>"; };
 		09F8DAB61FEC21E800460888 /* MapViewController+ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MapViewController+ViewModel.swift"; sourceTree = "<group>"; };
@@ -285,6 +295,7 @@
 				096677A21FEC659700A64D2F /* ImageRepository */,
 				09F8DAB81FEC31C900460888 /* Infrastructure */,
 				09F8DAB31FEC187700460888 /* LocationService */,
+				09CA65FC1FEE7E6100C7646E /* PersistContainer */,
 				09F8DAC31FEC3B6900460888 /* PlacesRepository */,
 			);
 			path = Contracts;
@@ -297,6 +308,34 @@
 				097176391FEC0B9F00C5975D /* MenuItem.swift */,
 			);
 			path = Instrastructure;
+			sourceTree = "<group>";
+		};
+		09CA65FC1FEE7E6100C7646E /* PersistContainer */ = {
+			isa = PBXGroup;
+			children = (
+				09CA65FD1FEE7EBF00C7646E /* PersistContainer.swift */,
+				09CA66011FEE7FB700C7646E /* PersistContainerFactory.swift */,
+				09CA65FF1FEE7F4E00C7646E /* PersistContainerObserver.swift */,
+				09CA66081FEE891E00C7646E /* Extensions */,
+				09CA66031FEE836A00C7646E /* Models */,
+			);
+			path = PersistContainer;
+			sourceTree = "<group>";
+		};
+		09CA66031FEE836A00C7646E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				09CA66041FEE837A00C7646E /* PlaceMO.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		09CA66081FEE891E00C7646E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				09CA66091FEE892C00C7646E /* Place+PlaceMO.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		09F8DAB31FEC187700460888 /* LocationService */ = {
@@ -466,6 +505,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				09F8DAD01FEC58CF00460888 /* PlaceDetailsViewController+View.swift in Sources */,
+				09CA66051FEE837A00C7646E /* PlaceMO.swift in Sources */,
 				09F8DAD21FEC58DC00460888 /* PlaceDetailsView.swift in Sources */,
 				0971763A1FEC0B9F00C5975D /* MenuItem.swift in Sources */,
 				09F8DABC1FEC34E800460888 /* MapView.swift in Sources */,
@@ -473,6 +513,7 @@
 				097176381FEC0B5A00C5975D /* Icon.swift in Sources */,
 				09F8DABA1FEC31D800460888 /* View.swift in Sources */,
 				09F8DAC91FEC549F00460888 /* DetailsCoordinator.swift in Sources */,
+				09CA660A1FEE892C00C7646E /* Place+PlaceMO.swift in Sources */,
 				097176331FEC069700C5975D /* AppCoordinator.swift in Sources */,
 				09A015501FEC1316008C331E /* PlacesRepository.swift in Sources */,
 				09F8DAB71FEC21E800460888 /* MapViewController+ViewModel.swift in Sources */,
@@ -483,6 +524,8 @@
 				09A015531FEC1380008C331E /* Coordinates.swift in Sources */,
 				09F8DAC71FEC4F8300460888 /* MapViewController+Annotation.swift in Sources */,
 				09F8DACC1FEC584400460888 /* PlaceDetailsViewController.swift in Sources */,
+				09CA66001FEE7F4E00C7646E /* PersistContainerObserver.swift in Sources */,
+				09CA65FE1FEE7EBF00C7646E /* PersistContainer.swift in Sources */,
 				09A0154D1FEC1191008C331E /* Place.swift in Sources */,
 				0971760A1FEC060200C5975D /* AppDelegate.swift in Sources */,
 				09F8DABE1FEC35AF00460888 /* MapViewModel.swift in Sources */,
@@ -492,6 +535,7 @@
 				097176441FEC0FAC00C5975D /* MapViewController.swift in Sources */,
 				09F8DAC51FEC3B8100460888 /* PlacesRepositoryFactory.swift in Sources */,
 				096677A61FEC65E600A64D2F /* ImageRepositoryFactory.swift in Sources */,
+				09CA66021FEE7FB800C7646E /* PersistContainerFactory.swift in Sources */,
 				09F8DAB51FEC18C100460888 /* LocationServiceFactory.swift in Sources */,
 				096677A41FEC65A800A64D2F /* ImageRepository.swift in Sources */,
 			);
@@ -583,7 +627,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -634,7 +678,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

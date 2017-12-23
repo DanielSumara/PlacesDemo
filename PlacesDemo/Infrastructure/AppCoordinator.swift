@@ -24,6 +24,7 @@ final class AppCoordinator {
     private lazy var locationService: LocationService = LocationServiceFactory().create()
     private lazy var placesRepository: PlacesRepository = PlacesRepositoryFactory().create()
     private lazy var imageRepository: ImageRepository = ImageRepositoryFactory().create()
+    private lazy var persistContainer: PersistContainer = PersistContainerFactory().create()
     
     // MARK:- Lifecycle
     
@@ -36,6 +37,10 @@ final class AppCoordinator {
     
     func initialize() {
         window.rootViewController = rootViewController
+    }
+    
+    func persistData() {
+        persistContainer.persistData()
     }
     
     // MARK:- Methods
@@ -74,7 +79,7 @@ final class AppCoordinator {
 extension AppCoordinator: DetailsCoordinator {
     
     func showDetails(of place: Place) {
-        let viewModel = PlaceDetailsViewController.ViewModel(for: place, using: imageRepository)
+        let viewModel = PlaceDetailsViewController.ViewModel(place: place, imageRepository: imageRepository, persistContainer: persistContainer)
         let vc = PlaceDetailsViewController(with: viewModel)
         rootViewController.selectedViewController?.show(vc, sender: self)
     }

@@ -13,5 +13,6 @@ public protocol PlaceDetailsViewModel {
     weak var view: PlaceDetailsView! { get set }
     
     func updateView()
+    func persistPlace()
     
 }

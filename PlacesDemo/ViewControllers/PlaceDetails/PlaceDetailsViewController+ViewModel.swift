@@ -19,12 +19,14 @@ extension PlaceDetailsViewController {
         private let place: Place
         
         private let imageRepository: ImageRepository
+        private let persistContainer: PersistContainer
         
         // MARK:- Lifecycle
         
-        public init(for place: Place, using imageRepository: ImageRepository) {
+        public init(place: Place, imageRepository: ImageRepository, persistContainer: PersistContainer) {
             self.place = place
             self.imageRepository = imageRepository
+            self.persistContainer = persistContainer
         }
         
         // MARK:- PlaceDetailsViewModel
@@ -38,6 +40,10 @@ extension PlaceDetailsViewController {
 
                 self.view.set(image: image)
             }
+        }
+        
+        public func persistPlace() {
+            persistContainer.persist(place: place)
         }
         
     }
